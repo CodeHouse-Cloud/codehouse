@@ -10,7 +10,6 @@ Unlike traditional online course platforms, CodeHouse Cloud combines **structure
 
 The frontend is designed to provide a modern, responsive, accessible, and engaging experience for students, instructors, mentors, employers, and administrators.
 
----
 
 ## Table of Contents
 
@@ -52,7 +51,7 @@ The frontend is designed to provide a modern, responsive, accessible, and engagi
 * [License](#license)
 * [Contact](#contact)
 
----
+
 
 ## Project Overview
 
@@ -75,7 +74,7 @@ The new frontend experience focuses on:
 * Finding internships and jobs.
 * Participating in a developer community.
 
----
+
 
 ## Rebranding Vision
 
@@ -112,19 +111,19 @@ The redesigned CodeHouse Cloud focuses on:
 
 > **Learn. Code. Build. Collaborate. Grow.**
 
----
+
 
 ## Vision
 
 > To become Africa's leading AI-powered software engineering academy that equips learners with world-class technical skills, practical experience, mentorship, and career opportunities.
 
----
+
 
 ## Mission
 
 > To empower aspiring software developers through intelligent learning experiences, industry-focused education, practical coding environments, real-world projects, mentorship, and career support powered by innovative technology.
 
----
+
 
 ## Target Audience
 
@@ -142,7 +141,7 @@ CodeHouse Cloud is designed for:
 | Employers               | Technology companies                        | Discover and recruit developers         |
 | Administrators          | Platform managers                           | Manage and operate the ecosystem        |
 
----
+
 
 # Core Frontend Functionality
 
@@ -173,7 +172,7 @@ The CodeHouse Cloud frontend will provide the following major experiences:
 * Instructor Portal.
 * Administrator Portal.
 
----
+
 
 # Website Structure
 
@@ -238,7 +237,7 @@ CodeHouse Cloud
 └── Administrator Portal
 ```
 
----
+
 
 # Homepage
 
@@ -334,7 +333,7 @@ Course cards should display:
 * Enrollment status.
 * `Enroll Now` or `Continue Learning` action.
 
----
+
 
 # Student Dashboard
 
@@ -374,7 +373,7 @@ Student Dashboard
 
 The dashboard should allow students to continue learning quickly without unnecessary navigation.
 
----
+
 
 # Courses and Learning
 
@@ -414,7 +413,7 @@ Students should be able to:
 * Monitor course progress.
 * Earn certificates.
 
----
+
 
 # Learning Roadmaps
 
@@ -462,7 +461,7 @@ Career Preparation
 
 Students should be able to track their progress through each roadmap.
 
----
+
 
 # AI Coding Assistant
 
@@ -514,7 +513,7 @@ The AI interface may include:
 
 The AI should function primarily as a **learning companion and coding tutor**.
 
----
+
 
 # Coding Playground
 
@@ -545,7 +544,7 @@ Potential programming languages include:
 
 The final supported languages will depend on the backend code execution infrastructure.
 
----
+
 
 # Coding Challenges
 
@@ -571,7 +570,7 @@ Each challenge may display:
 * Score.
 * Ranking.
 
----
+
 
 # Leaderboards
 
@@ -595,7 +594,7 @@ Leaderboard information may include:
 * Projects completed.
 * Current rank.
 
----
+
 
 # Project Marketplace
 
@@ -625,7 +624,7 @@ Potential projects include:
 
 The Project Marketplace should help students build real portfolios demonstrating practical skills.
 
----
+
 
 # Mentorship Platform
 
@@ -653,7 +652,7 @@ Mentor profiles may contain:
 * Availability.
 * Session details.
 
----
+
 
 # Career Center
 
@@ -680,7 +679,7 @@ Students should be able to:
 
 Future functionality may include an Employer Talent Portal that allows companies to discover qualified CodeHouse Cloud graduates.
 
----
+
 
 # Community
 
@@ -704,7 +703,7 @@ Users should be able to:
 * Follow discussions.
 * Search community content.
 
----
+
 
 # Student Profile
 
@@ -727,7 +726,7 @@ The profile may include:
 
 The long-term goal is to transform the student profile into a **developer portfolio and verified skills identity**.
 
----
+
 
 # Instructor Portal
 
@@ -764,7 +763,7 @@ Instructor Dashboard
 └── Certificates
 ```
 
----
+
 
 # Administrator Portal
 
@@ -789,7 +788,7 @@ Administrators should be able to manage:
 
 Administrative functionality must be protected using role-based access control.
 
----
+
 
 # Authentication
 
@@ -817,7 +816,7 @@ Administrator
 
 The interface should dynamically adapt according to the authenticated user's role and permissions.
 
----
+
 
 # Design System
 
@@ -847,7 +846,7 @@ The design language should communicate:
 * Accessibility.
 * African-centered innovation.
 
----
+
 
 # Responsive Design
 
@@ -870,7 +869,7 @@ The mobile experience should prioritize:
 
 The frontend should follow a mobile-first approach where appropriate.
 
----
+
 
 # Accessibility
 
@@ -890,7 +889,7 @@ Requirements include:
 
 Accessibility should be considered throughout the development lifecycle.
 
----
+
 
 # Technology Stack
 
@@ -937,7 +936,7 @@ Accessibility should be considered throughout the development lifecycle.
 
 * Cloud Hosting
 
----
+
 
 # API Integration
 
@@ -967,7 +966,7 @@ Potential API modules include:
 
 API communication should be separated from UI components to maintain a scalable and maintainable frontend architecture.
 
----
+
 
 # Frontend State and User Experience
 
@@ -991,7 +990,7 @@ Users should always understand:
 3. What went wrong.
 4. What they can do next.
 
----
+
 
 # Performance
 
@@ -1015,7 +1014,7 @@ The platform should aim for strong Lighthouse scores in:
 * Best Practices.
 * SEO.
 
----
+
 
 # SEO
 
@@ -1042,7 +1041,7 @@ SEO-optimized public pages may include:
 * Jobs.
 * Internships.
 
----
+
 
 # Security
 
@@ -1068,7 +1067,7 @@ The frontend must never expose:
 * Private configuration values.
 * Sensitive authentication credentials.
 
----
+
 
 # Development Principles
 
@@ -1110,7 +1109,7 @@ Optimize components, API requests, and assets.
 
 Every feature should solve a clear problem for a learner, instructor, mentor, employer, or administrator.
 
----
+
 
 # Development Roadmap
 
@@ -1167,7 +1166,7 @@ Every feature should solve a clear problem for a learner, instructor, mentor, em
 * Cloud IDE.
 * Employer Talent Portal.
 
----
+
 
 # Future Enhancements
 
@@ -1187,7 +1186,7 @@ Planned future capabilities include:
 * Advanced developer portfolios.
 * AI-powered career recommendations.
 
----
+
 
 # Success Metrics
 
@@ -1209,7 +1208,7 @@ Key metrics include:
 * Job and internship applications.
 * Student retention.
 
----
+
 
 # Product Philosophy
 
@@ -1249,7 +1248,7 @@ Become an Industry-Ready Developer
 
 The ultimate goal is to create a platform where learners do not simply **consume educational content**, but actively **develop the skills, experience, portfolio, network, and confidence required to build successful careers in software engineering**.
 
----
+
 
 # License
 
@@ -1257,7 +1256,7 @@ This project and its source code are proprietary to **CodeHouse Cloud / Applinet
 
 Unauthorized copying, redistribution, or commercial use is prohibited without written permission from the project owners.
 
----
+
 
 # Contact
 
