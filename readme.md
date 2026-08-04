@@ -1,810 +1,1243 @@
-# CodeHouse Cloud
+# CodeHouse Cloud Frontend — Contributors Guidelines
 
 ## AI-Powered Software Engineering Academy
 
+**Project:** CodeHouse Cloud
 **Website:** https://www.codehouse.cloud
+**Frontend:** Next.js, React, TypeScript, Tailwind CSS
+**Backend:** Django / Django REST Framework
+**Repository:** https://github.com/CodeHouse-Cloud/codehouse.git
 
-CodeHouse Cloud is being rebranded and redesigned as an **AI-powered software engineering academy** designed to help learners progress from complete beginners to industry-ready software engineers.
+---
 
-Unlike traditional online course platforms, CodeHouse Cloud combines **structured learning, Artificial Intelligence, practical coding environments, real-world projects, mentorship, collaboration, career development, and community** into a single learning ecosystem.
+# 1. Welcome to CodeHouse Cloud
 
-The frontend is designed to provide a modern, responsive, accessible, and engaging experience for students, instructors, mentors, employers, and administrators.
+Welcome to the CodeHouse Cloud frontend development team.
 
+CodeHouse Cloud is being reimagined as an **AI-powered software engineering academy** designed to help learners progress from complete beginners to industry-ready software engineers.
 
-## Table of Contents
+The platform combines:
 
-* [Project Overview](#project-overview)
-* [Rebranding Vision](#rebranding-vision)
-* [Vision](#vision)
-* [Mission](#mission)
-* [Target Audience](#target-audience)
-* [Core Frontend Functionality](#core-frontend-functionality)
-* [Website Structure](#website-structure)
-* [Homepage](#homepage)
-* [Student Dashboard](#student-dashboard)
-* [Courses and Learning](#courses-and-learning)
-* [Learning Roadmaps](#learning-roadmaps)
-* [AI Coding Assistant](#ai-coding-assistant)
-* [Coding Playground](#coding-playground)
-* [Coding Challenges](#coding-challenges)
-* [Project Marketplace](#project-marketplace)
-* [Mentorship Platform](#mentorship-platform)
-* [Career Center](#career-center)
-* [Community](#community)
-* [Student Profile](#student-profile)
-* [Instructor Portal](#instructor-portal)
-* [Administrator Portal](#administrator-portal)
-* [Authentication](#authentication)
-* [Design System](#design-system)
-* [Responsive Design](#responsive-design)
-* [Accessibility](#accessibility)
-* [Technology Stack](#technology-stack)
-* [API Integration](#api-integration)
-* [Performance](#performance)
-* [SEO](#seo)
-* [Security](#security)
-* [Development Principles](#development-principles)
-* [Development Roadmap](#development-roadmap)
-* [Future Enhancements](#future-enhancements)
-* [Success Metrics](#success-metrics)
-* [Product Philosophy](#product-philosophy)
-* [License](#license)
-* [Contact](#contact)
-
-
-
-## Project Overview
-
-CodeHouse Cloud represents a new generation of software engineering education.
-
-The platform is designed to provide learners with everything they need to move from learning programming fundamentals to developing practical skills and preparing for professional software engineering careers.
-
-The new frontend experience focuses on:
-
-* Learning programming.
-* Following structured learning paths.
-* Practicing software development.
-* Using Artificial Intelligence as a learning assistant.
-* Solving coding challenges.
-* Building real-world projects.
-* Collaborating with other developers.
-* Connecting with mentors.
-* Earning certificates.
-* Building professional developer profiles.
-* Finding internships and jobs.
-* Participating in a developer community.
-
-
-
-## Rebranding Vision
-
-The CodeHouse Cloud rebrand transforms the platform from a traditional online learning platform into a complete **AI-powered software engineering academy**.
-
-### Previous Direction
-
-The previous platform focused primarily on:
-
-* Online courses.
-* Programming education.
-* Learning resources.
-* Educational content.
-
-### New Direction
-
-The redesigned CodeHouse Cloud focuses on:
-
-* AI-powered learning.
 * Structured software engineering education.
-* Personalized learning paths.
-* Interactive coding practice.
-* Browser-based coding environments.
-* AI coding assistance.
-* Real-world project development.
+* Artificial Intelligence.
+* Practical coding environments.
+* Coding challenges.
+* Real-world projects.
 * Developer collaboration.
 * Mentorship.
 * Career development.
 * Jobs and internships.
+* Professional developer profiles.
+* Certificates.
 * Community engagement.
-* Student progress tracking.
 
-### Core Message
+The goal of this repository is to build a scalable, accessible, responsive, secure, and professional frontend experience for the entire CodeHouse Cloud ecosystem.
 
-> **Learn. Code. Build. Collaborate. Grow.**
+The frontend communicates with the CodeHouse Cloud Django backend through REST APIs.
 
+---
 
+# 2. Permission Legend
 
-## Vision
+The project structure uses four permission levels.
 
-> To become Africa's leading AI-powered software engineering academy that equips learners with world-class technical skills, practical experience, mentorship, and career opportunities.
+| Symbol | Permission              | Meaning                                                                                              |
+| ------ | ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| 🔴     | **PROTECTED**           | Do not modify unless explicitly authorized by the project maintainer.                                |
+| 🟢     | **CONTRIBUTOR**         | Contributors may create or modify files in this area when the corresponding feature is assigned.     |
+| 🟠     | **ASSIGNMENT REQUIRED** | Do not modify unless the task specifically assigns this area or approval is given.                   |
+| 🔵     | **SHARED**              | Shared infrastructure or reusable components. Reuse existing code and avoid unnecessary duplication. |
 
+> **Important:** A contributor's permission is determined by their assigned task. Having access to the GitHub repository does not automatically mean that every file may be modified.
 
+---
 
-## Mission
+# 3. Important Rule Before You Start Coding
 
-> To empower aspiring software developers through intelligent learning experiences, industry-focused education, practical coding environments, real-world projects, mentorship, and career support powered by innovative technology.
+**Do not start coding directly on the `main` branch.**
 
+The `main` branch is a protected branch and represents stable, reviewed code.
 
+Every contributor must create a feature branch before making changes.
 
-## Target Audience
-
-CodeHouse Cloud is designed for:
-
-| Audience                | Description                                 | Primary Goal                            |
-| ----------------------- | ------------------------------------------- | --------------------------------------- |
-| Beginner Students       | New to programming                          | Learn software development from scratch |
-| University Students     | Computer Science and technology students    | Develop practical technical skills      |
-| Bootcamp Students       | Students in coding programs                 | Improve programming abilities           |
-| Career Changers         | Professionals transitioning into technology | Become employable developers            |
-| Professional Developers | Experienced software developers             | Learn modern technologies and upskill   |
-| Instructors             | Course creators and educators               | Teach and monitor learners              |
-| Mentors                 | Experienced developers                      | Guide and support learners              |
-| Employers               | Technology companies                        | Discover and recruit developers         |
-| Administrators          | Platform managers                           | Manage and operate the ecosystem        |
-
-
-
-# Core Frontend Functionality
-
-The CodeHouse Cloud frontend will provide the following major experiences:
-
-* Public marketing website.
-* Course discovery.
-* Learning roadmaps.
-* Student registration and authentication.
-* Personalized student dashboard.
-* Course learning interface.
-* Progress tracking.
-* Assignments and quizzes.
-* AI Coding Assistant.
-* Coding Playground.
-* Daily coding challenges.
-* Weekly coding challenges.
-* Leaderboards.
-* Project Marketplace.
-* Collaborative project development.
-* Mentorship booking.
-* Career Center.
-* Jobs and internships.
-* Developer profiles.
-* Community forum.
-* Blog.
-* Certificates.
-* Instructor Portal.
-* Administrator Portal.
-
-
-
-# Website Structure
+The general workflow is:
 
 ```text
-CodeHouse Cloud
-│
-├── Home
-├── About
-├── Courses
-├── Learning Roadmaps
-│
-├── Student Dashboard
-│   ├── Overview
-│   ├── My Courses
-│   ├── Learning Progress
-│   ├── My Roadmaps
-│   ├── Assignments
-│   ├── Quizzes
-│   ├── Achievements
-│   └── Certificates
-│
-├── AI Learning
-│   ├── AI Coding Assistant
-│   ├── AI Tutor
-│   └── Personalized Learning
-│
-├── Coding Practice
-│   ├── Coding Playground
-│   ├── Daily Challenges
-│   ├── Weekly Challenges
-│   └── Leaderboards
-│
-├── Projects
-│   ├── Project Marketplace
-│   ├── Student Projects
-│   └── Collaborative Projects
-│
-├── Mentorship
-│   ├── Browse Mentors
-│   ├── Mentor Profiles
-│   ├── Book a Session
-│   └── Mentorship Dashboard
-│
-├── Career Center
-│   ├── Jobs
-│   ├── Internships
-│   ├── Career Resources
-│   └── Developer Profiles
-│
-├── Community
-│   ├── Community Forum
-│   ├── Discussions
-│   └── Developer Network
-│
-├── Blog
-├── Contact
-│
-├── Student Profile
-├── Settings
-│
-├── Instructor Portal
-└── Administrator Portal
+main / development
+        │
+        ▼
+Create Feature Branch
+        │
+        ▼
+Write Code
+        │
+        ▼
+Test Locally
+        │
+        ▼
+Commit Changes
+        │
+        ▼
+Push Branch
+        │
+        ▼
+Create Pull Request
+        │
+        ▼
+Code Review
+        │
+        ▼
+Approval
+        │
+        ▼
+Merge
 ```
 
+Never push directly to `main` unless you are an authorized repository maintainer and the project explicitly requires it.
 
+Before starting work, always check the current repository branch strategy and follow the branch required by the project maintainer.
 
-# Homepage
+---
 
-The homepage is the primary entry point into the CodeHouse Cloud ecosystem.
+# 4. Technology Stack
 
-It should immediately communicate:
+## Core Technologies
 
-* What CodeHouse Cloud is.
-* Who the platform is designed for.
-* What learners can achieve.
-* How AI supports learning.
-* How users can begin their software engineering journey.
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* HTML5
+* CSS3
+* JavaScript / TypeScript
 
-## Homepage Sections
+## Backend Integration
 
-### Header
+* Django
+* Django REST Framework
+* REST APIs
 
-The global navigation should include:
+## Database
 
-* CodeHouse Cloud Logo.
-* Home.
-* Courses.
-* Roadmaps.
-* AI Tools.
-* Coding Playground.
-* Challenges.
-* Projects.
-* Mentorship.
-* Career Center.
-* Community.
-* Login.
-* Sign Up.
+The frontend does not directly connect to the database.
 
-The header must be responsive across desktop, tablet, and mobile devices.
+The frontend communicates with the Django backend through APIs.
 
-### Hero Section
+```text
+Next.js Frontend
+       │
+       │ HTTPS / REST API
+       ▼
+Django REST API
+       │
+       ▼
+Database
+```
 
-The hero section should clearly communicate the platform's core value proposition.
+## External Services
+
+Depending on the feature, the platform may integrate with:
+
+* Cloudinary
+* Paystack
+* OpenAI
+* Email services
+* Other approved third-party services
+
+---
+
+# 5. Project Architecture
+
+The CodeHouse Cloud frontend uses the Next.js App Router.
+
+The permission marker placed before a file or directory indicates its contribution status.
+
+```text
+codehouse-cloud/
+│
+├── public/
+│   │
+│   ├── 🟢 images/
+│   │   ├── 🟢 logo/
+│   │   ├── 🟢 courses/
+│   │   ├── 🟢 roadmaps/
+│   │   ├── 🟢 instructors/
+│   │   ├── 🟢 mentors/
+│   │   └── 🟢 projects/
+│   │
+│   ├── 🟢 icons/
+│   ├── 🟠 fonts/
+│   └── 🔴 favicon.ico
+│
+├── src/
+│   │
+│   ├── 🔴 app/
+│   │   │
+│   │   ├── 🔴 globals.css
+│   │   ├── 🔴 layout.tsx
+│   │   ├── 🟠 page.tsx
+│   │   │
+│   │   ├── 🟢 (public)/
+│   │   │   ├── 🔵 layout.tsx
+│   │   │   │
+│   │   │   ├── 🟢 about/
+│   │   │   │   └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 courses/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 [slug]/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 roadmaps/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 [slug]/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 ai/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   ├── 🟢 assistant/
+│   │   │   │   │   └── 🟢 page.tsx
+│   │   │   │   └── 🟢 tutor/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 playground/
+│   │   │   │   └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 challenges/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 [slug]/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 projects/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 [slug]/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 mentorship/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 [slug]/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 career/
+│   │   │   │   ├── 🟢 jobs/
+│   │   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   │   └── 🟢 [slug]/
+│   │   │   │   │       └── 🟢 page.tsx
+│   │   │   │   └── 🟢 internships/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 community/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 discussions/
+│   │   │   │       └── 🟢 [slug]/
+│   │   │   │           └── 🟢 page.tsx
+│   │   │   │
+│   │   │   ├── 🟢 blog/
+│   │   │   │   ├── 🟢 page.tsx
+│   │   │   │   └── 🟢 [slug]/
+│   │   │   │       └── 🟢 page.tsx
+│   │   │   │
+│   │   │   └── 🟢 contact/
+│   │   │       └── 🟢 page.tsx
+│   │   │
+│   │   ├── 🟠 (auth)/
+│   │   │   ├── 🔴 layout.tsx
+│   │   │   ├── 🟠 login/
+│   │   │   │   └── 🟠 page.tsx
+│   │   │   ├── 🟠 signup/
+│   │   │   │   └── 🟠 page.tsx
+│   │   │   ├── 🟠 forgot-password/
+│   │   │   │   └── 🟠 page.tsx
+│   │   │   └── 🟠 reset-password/
+│   │   │       └── 🟠 page.tsx
+│   │   │
+│   │   ├── 🟠 dashboard/
+│   │   │   ├── 🔴 layout.tsx
+│   │   │   ├── 🟠 page.tsx
+│   │   │   ├── 🟢 courses/
+│   │   │   ├── 🟢 progress/
+│   │   │   ├── 🟢 assignments/
+│   │   │   ├── 🟢 quizzes/
+│   │   │   ├── 🟢 achievements/
+│   │   │   ├── 🟢 certificates/
+│   │   │   └── 🟠 settings/
+│   │   │
+│   │   ├── 🟠 instructor/
+│   │   │   ├── 🔴 layout.tsx
+│   │   │   ├── 🟠 page.tsx
+│   │   │   ├── 🟢 courses/
+│   │   │   ├── 🟢 assignments/
+│   │   │   ├── 🟢 quizzes/
+│   │   │   ├── 🟢 students/
+│   │   │   └── 🟢 analytics/
+│   │   │
+│   │   └── 🟠 admin/
+│   │       ├── 🔴 layout.tsx
+│   │       ├── 🔴 page.tsx
+│   │       ├── 🟠 users/
+│   │       ├── 🟠 courses/
+│   │       ├── 🟠 projects/
+│   │       ├── 🟠 jobs/
+│   │       ├── 🟠 payments/
+│   │       ├── 🟠 analytics/
+│   │       └── 🔴 settings/
+│   │
+│   ├── components/
+│   │   │
+│   │   ├── 🔵 common/
+│   │   │   ├── 🔵 Button.tsx
+│   │   │   ├── 🔵 Card.tsx
+│   │   │   ├── 🔵 Modal.tsx
+│   │   │   ├── 🔵 Loader.tsx
+│   │   │   ├── 🔵 EmptyState.tsx
+│   │   │   ├── 🔵 ErrorMessage.tsx
+│   │   │   └── 🔵 Pagination.tsx
+│   │   │
+│   │   ├── 🔴 layout/
+│   │   │   ├── 🔴 Header.tsx
+│   │   │   ├── 🔴 Footer.tsx
+│   │   │   ├── 🔴 Navbar.tsx
+│   │   │   ├── 🔴 MobileMenu.tsx
+│   │   │   ├── 🔴 StudentSidebar.tsx
+│   │   │   ├── 🔴 InstructorSidebar.tsx
+│   │   │   └── 🔴 AdminSidebar.tsx
+│   │   │
+│   │   ├── 🟢 home/
+│   │   │   ├── 🟢 Hero.tsx
+│   │   │   ├── 🟢 FeaturedCourses.tsx
+│   │   │   ├── 🟢 FeaturedRoadmaps.tsx
+│   │   │   ├── 🟢 AISection.tsx
+│   │   │   └── 🟢 CTASection.tsx
+│   │   │
+│   │   ├── 🟢 courses/
+│   │   │   ├── 🟢 CourseCard.tsx
+│   │   │   ├── 🟢 CourseGrid.tsx
+│   │   │   ├── 🟢 CourseFilter.tsx
+│   │   │   ├── 🟢 CourseCurriculum.tsx
+│   │   │   └── 🟢 CourseProgress.tsx
+│   │   │
+│   │   ├── 🟢 roadmaps/
+│   │   │   ├── 🟢 RoadmapCard.tsx
+│   │   │   ├── 🟢 RoadmapTimeline.tsx
+│   │   │   └── 🟢 RoadmapProgress.tsx
+│   │   │
+│   │   ├── 🟢 ai/
+│   │   │   ├── 🟢 AIChat.tsx
+│   │   │   ├── 🟢 AIMessage.tsx
+│   │   │   └── 🟢 CodeAssistant.tsx
+│   │   │
+│   │   ├── 🟢 coding/
+│   │   │   ├── 🟢 CodeEditor.tsx
+│   │   │   ├── 🟢 Console.tsx
+│   │   │   └── 🟢 ChallengeCard.tsx
+│   │   │
+│   │   ├── 🟢 projects/
+│   │   │   ├── 🟢 ProjectCard.tsx
+│   │   │   ├── 🟢 ProjectFilter.tsx
+│   │   │   └── 🟢 ProjectTeam.tsx
+│   │   │
+│   │   ├── 🟢 mentorship/
+│   │   │   ├── 🟢 MentorCard.tsx
+│   │   │   ├── 🟢 MentorProfile.tsx
+│   │   │   └── 🟢 BookingCalendar.tsx
+│   │   │
+│   │   ├── 🟢 career/
+│   │   │   ├── 🟢 JobCard.tsx
+│   │   │   ├── 🟢 JobFilter.tsx
+│   │   │   └── 🟢 JobApplication.tsx
+│   │   │
+│   │   └── 🟢 community/
+│   │       ├── 🟢 DiscussionCard.tsx
+│   │       ├── 🟢 PostEditor.tsx
+│   │       └── 🟢 CommentList.tsx
+│   │
+│   ├── 🔴 lib/
+│   │   ├── 🔴 api.ts
+│   │   ├── 🔴 auth.ts
+│   │   ├── 🔴 constants.ts
+│   │   └── 🔵 utils.ts
+│   │
+│   ├── services/
+│   │   ├── 🟠 authService.ts
+│   │   ├── 🟢 courseService.ts
+│   │   ├── 🟢 roadmapService.ts
+│   │   ├── 🟢 projectService.ts
+│   │   ├── 🟢 mentorshipService.ts
+│   │   ├── 🟢 careerService.ts
+│   │   └── 🟢 communityService.ts
+│   │
+│   ├── hooks/
+│   │   ├── 🟠 useAuth.ts
+│   │   ├── 🟢 useCourses.ts
+│   │   └── 🔵 useDebounce.ts
+│   │
+│   ├── context/
+│   │   ├── 🔴 AuthContext.tsx
+│   │   └── 🟠 AppContext.tsx
+│   │
+│   ├── types/
+│   │   ├── 🟢 user.ts
+│   │   ├── 🟢 course.ts
+│   │   ├── 🟢 roadmap.ts
+│   │   ├── 🟢 project.ts
+│   │   └── 🔴 api.ts
+│   │
+│   └── config/
+│       └── 🔴 siteConfig.ts
+│
+├── 🔴 .env.local
+├── 🔴 .gitignore
+├── 🟠 next.config.ts
+├── 🟠 package.json
+├── 🔴 postcss.config.mjs
+├── 🔴 tsconfig.json
+└── 🔵 README.md
+```
+
+> **Note:** A permission marker on a directory applies to the files and subdirectories within it unless a more specific marker is shown.
+
+---
+
+# 6. Understanding the Project Structure
+
+## `src/app/`
+
+This directory contains application routes and Next.js layouts.
+
+A folder containing:
+
+```text
+page.tsx
+```
+
+represents a page.
+
+For example:
+
+```text
+src/app/(public)/courses/page.tsx
+```
+
+represents:
+
+```text
+/courses
+```
+
+A dynamic route:
+
+```text
+src/app/(public)/courses/[slug]/page.tsx
+```
+
+represents URLs such as:
+
+```text
+/courses/python
+/courses/javascript
+/courses/react
+```
+
+---
+
+## `src/components/`
+
+This directory contains reusable UI components.
+
+Examples:
+
+```text
+components/courses/CourseCard.tsx
+components/roadmaps/RoadmapCard.tsx
+components/mentorship/MentorCard.tsx
+```
+
+Components should be reusable wherever possible.
+
+---
+
+## `src/lib/`
+
+This directory contains core application utilities and infrastructure.
+
+Examples:
+
+```text
+api.ts
+auth.ts
+constants.ts
+utils.ts
+```
+
+Core infrastructure is protected.
+
+Contributors should not modify protected files unless specifically assigned.
+
+---
+
+## `src/services/`
+
+This directory contains API communication logic for specific application modules.
+
+Examples:
+
+```text
+courseService.ts
+roadmapService.ts
+projectService.ts
+```
+
+Services should communicate with the centralized API layer rather than hardcoding API URLs.
+
+---
+
+## `src/hooks/`
+
+Reusable React hooks belong here.
+
+Examples:
+
+```text
+useAuth.ts
+useCourses.ts
+useDebounce.ts
+```
+
+---
+
+## `src/context/`
+
+Application-wide React context belongs here.
+
+Examples:
+
+```text
+AuthContext.tsx
+AppContext.tsx
+```
+
+Authentication-related context is protected.
+
+---
+
+## `src/types/`
+
+Shared TypeScript types belong here.
+
+Examples:
+
+```text
+user.ts
+course.ts
+roadmap.ts
+project.ts
+api.ts
+```
+
+---
+
+# 7. 🔴 Protected Areas
+
+Protected areas contain infrastructure that can affect the entire application.
+
+Contributors must not modify protected files unless explicitly authorized by the project maintainer.
+
+Examples include:
+
+```text
+🔴 src/app/layout.tsx
+🔴 src/app/globals.css
+
+🔴 src/components/layout/Header.tsx
+🔴 src/components/layout/Footer.tsx
+🔴 src/components/layout/Navbar.tsx
+🔴 src/components/layout/MobileMenu.tsx
+🔴 src/components/layout/StudentSidebar.tsx
+🔴 src/components/layout/InstructorSidebar.tsx
+🔴 src/components/layout/AdminSidebar.tsx
+
+🔴 src/lib/api.ts
+🔴 src/lib/auth.ts
+🔴 src/lib/constants.ts
+
+🔴 src/context/AuthContext.tsx
+
+🔴 src/types/api.ts
+🔴 src/config/siteConfig.ts
+
+🔴 tsconfig.json
+🔴 postcss.config.mjs
+🔴 .gitignore
+🔴 .env.local
+```
+
+These files may affect multiple features or the entire application.
+
+Changing them without coordination can break multiple modules.
+
+---
+
+# 8. 🟢 Contributor Areas
+
+Contributors may work on these areas when they have been assigned the corresponding feature.
+
+Examples include:
+
+```text
+🟢 Courses
+🟢 Roadmaps
+🟢 AI
+🟢 Coding
+🟢 Challenges
+🟢 Projects
+🟢 Mentorship
+🟢 Career
+🟢 Community
+🟢 Homepage sections
+🟢 Public pages
+🟢 Feature-specific components
+🟢 Feature-specific services
+🟢 Feature-specific hooks
+🟢 Feature-specific types
+```
+
+For example, a contributor assigned to Courses may work primarily on:
+
+```text
+🟢 src/app/(public)/courses/
+
+🟢 src/components/courses/
+
+🟢 src/services/courseService.ts
+
+🟢 src/hooks/useCourses.ts
+
+🟢 src/types/course.ts
+```
+
+The contributor should avoid modifying unrelated modules.
+
+---
+
+# 9. 🟠 Assignment Required Areas
+
+The following areas require explicit assignment or approval before modification:
+
+```text
+🟠 Authentication
+🟠 Authorization
+🟠 Dashboard architecture
+🟠 Instructor architecture
+🟠 Administrator architecture
+🟠 Environment configuration
+🟠 Next.js configuration
+🟠 Package dependencies
+🟠 Application context
+🟠 Authentication services
+🟠 Authentication hooks
+🟠 Global configuration
+🟠 Deployment configuration
+```
+
+Examples:
+
+```text
+🟠 src/app/(auth)/
+🟠 src/app/dashboard/
+🟠 src/app/instructor/
+🟠 src/app/admin/
+
+🟠 src/services/authService.ts
+🟠 src/hooks/useAuth.ts
+🟠 src/context/AppContext.tsx
+
+🟠 next.config.ts
+🟠 package.json
+```
+
+If your assigned task does not involve these areas, do not modify them.
+
+---
+
+# 10. 🔵 Shared Components and Infrastructure
+
+Shared components are intended to be reused throughout the application.
+
+Examples:
+
+```text
+🔵 Button.tsx
+🔵 Card.tsx
+🔵 Modal.tsx
+🔵 Loader.tsx
+🔵 EmptyState.tsx
+🔵 ErrorMessage.tsx
+🔵 Pagination.tsx
+🔵 utils.ts
+🔵 useDebounce.ts
+```
+
+Before creating a new component, check whether an existing shared component can be reused.
+
+For example, do not create:
+
+```text
+CourseButton.tsx
+RoadmapButton.tsx
+ProjectButton.tsx
+MentorButton.tsx
+```
+
+if the existing:
+
+```text
+🔵 Button.tsx
+```
+
+already meets the requirement.
+
+If a shared component needs improvement, discuss the change before modifying it.
+
+---
+
+# 11. API Integration Rules
+
+The frontend communicates with the Django backend through the centralized API layer.
+
+The API base URL should come from environment variables.
 
 Example:
 
-> ## Build Your Future in Software Engineering
+```env
+NEXT_PUBLIC_API_URL=https://api.codehouse.cloud/api
+NEXT_PUBLIC_SITE_URL=https://www.codehouse.cloud
+```
 
-> Learn programming, practice real-world coding, build projects, work with AI, connect with mentors, and prepare for a career in technology.
+Do not hardcode API URLs inside individual components.
 
-Primary actions:
+Do not write:
 
-* `Start Learning`
-* `Explore Roadmaps`
-* `Try AI Coding Assistant`
+```typescript
+fetch(
+  "https://api.codehouse.cloud/api/courses/"
+);
+```
 
-Secondary actions:
+Instead, use the project's centralized API infrastructure:
 
-* `Browse Courses`
-* `Join the Community`
+```typescript
+import { apiClient } from "@/lib/api";
 
-### Featured Learning Paths
+const courses = await apiClient("/courses/");
+```
 
-The homepage should display popular learning paths such as:
+The exact API client implementation may differ depending on the project architecture. Always use the approved centralized API layer.
 
-* Frontend Development.
-* Backend Development.
-* Full-Stack Development.
-* Mobile App Development.
-* Python Development.
-* JavaScript Development.
-* Data Science.
-* Artificial Intelligence.
-* Cloud Computing.
-* Cybersecurity.
+The preferred architecture is:
 
-Each roadmap should display:
+```text
+Page
+  │
+  ▼
+Component
+  │
+  ▼
+Service
+  │
+  ▼
+API Client
+  │
+  ▼
+Django REST API
+```
 
-* Difficulty level.
-* Estimated duration.
-* Technologies covered.
-* Number of courses.
-* Projects included.
-* Progress tracking.
-* Certificate information.
+Do not duplicate API request logic across multiple components.
 
-### Featured Courses
+---
 
-Course cards should display:
+# 12. API Services
 
-* Course thumbnail.
-* Course title.
-* Instructor.
-* Difficulty.
-* Duration.
-* Rating.
-* Number of students.
-* Enrollment status.
-* `Enroll Now` or `Continue Learning` action.
+Each major application module should have its own service.
 
+Examples:
 
+```text
+services/
+├── authService.ts
+├── courseService.ts
+├── roadmapService.ts
+├── projectService.ts
+├── mentorshipService.ts
+├── careerService.ts
+└── communityService.ts
+```
 
-# Student Dashboard
+For example, course API logic should belong in:
 
-The Student Dashboard serves as the learner's personal command center.
+```text
+courseService.ts
+```
 
-The dashboard should provide:
+rather than being repeated throughout multiple page components.
 
-* Welcome message.
-* Overall learning progress.
-* Current courses.
-* Continue Learning section.
-* Active learning roadmap.
-* Recommended courses.
-* Coding challenges.
-* Recent projects.
-* Upcoming mentorship sessions.
-* Achievements.
-* Certificates.
-* Recent activity.
+---
+
+# 13. Environment Variables and Security
+
+Environment variables are used to configure the application without hardcoding configuration values into source code.
 
 Example:
 
+```env
+NEXT_PUBLIC_API_URL=https://api.codehouse.cloud/api
+NEXT_PUBLIC_SITE_URL=https://www.codehouse.cloud
+NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY=
+```
+
+The actual `.env.local` file must never be committed to GitHub.
+
+Never commit:
+
 ```text
-Student Dashboard
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+```
+
+Never commit:
+
+* API keys.
+* OpenAI secret keys.
+* Django secret keys.
+* Database credentials.
+* Payment secret keys.
+* Private authentication credentials.
+* Passwords.
+* Private tokens.
+
+The repository may contain:
+
+```text
+.env.example
+```
+
+The `.env.example` file should contain variable names only, not private credentials.
+
+---
+
+## Important `NEXT_PUBLIC_` Rule
+
+Any variable beginning with:
+
+```text
+NEXT_PUBLIC_
+```
+
+may be exposed to the browser.
+
+Therefore, never put private secrets in variables beginning with:
+
+```text
+NEXT_PUBLIC_
+```
+
+Never do this:
+
+```env
+NEXT_PUBLIC_OPENAI_API_KEY=secret-key
+```
+
+Private secrets must remain server-side.
+
+---
+
+# 14. Header and Footer
+
+The CodeHouse Cloud Header and Footer are shared across the public website.
+
+The public layout is responsible for rendering them.
+
+Conceptually:
+
+```text
+Public Layout
 │
-├── Welcome Message
-├── Overall Learning Progress
-├── Continue Learning
-├── Current Roadmap
-├── Recommended Courses
-├── Coding Challenge
-├── Recent Projects
-├── Upcoming Mentorship
-├── Achievements
-└── Certificates
-```
-
-The dashboard should allow students to continue learning quickly without unnecessary navigation.
-
-
-
-# Courses and Learning
-
-The course learning interface provides a focused environment for structured learning.
-
-A course may contain:
-
-```text
-Course
+├── Header
 │
-├── Course Overview
-├── Curriculum
-│   ├── Module 1
-│   ├── Module 2
-│   ├── Module 3
-│   └── Module 4
+├── Page Content
 │
-├── Video Lessons
-├── Reading Materials
-├── Code Examples
-├── Assignments
-├── Quizzes
-├── Progress Tracking
-├── Discussions
-└── Certificate
+└── Footer
 ```
 
-Students should be able to:
+Contributors should not add their own Header or Footer to individual pages.
 
-* Resume lessons.
-* Track completed lessons.
-* Access learning materials.
-* Complete assignments.
-* Take quizzes.
-* View grades.
-* Ask questions.
-* Monitor course progress.
-* Earn certificates.
+Do not do this inside a page if the page already belongs to the public layout:
 
+```tsx
+<Header />
 
+<CoursePage />
 
-# Learning Roadmaps
+<Footer />
+```
 
-Learning Roadmaps guide students from beginner-level knowledge to professional skills.
+The layout should automatically provide the Header and Footer.
 
-Each roadmap should provide:
+---
 
-* Learning objectives.
-* Recommended courses.
-* Technology stack.
-* Difficulty level.
-* Estimated learning duration.
-* Required prerequisites.
-* Projects.
-* Coding challenges.
-* Certificates.
+# 15. Page Metadata and SEO
 
-Example roadmap:
+Every public page should have appropriate metadata.
+
+For example:
+
+```typescript
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Courses",
+  description:
+    "Explore software engineering courses at CodeHouse Cloud.",
+};
+```
+
+Individual pages should define their own where appropriate:
+
+* Page title.
+* Meta description.
+* Open Graph information.
+* Canonical URL.
+
+Do not modify global SEO configuration unnecessarily.
+
+Public pages that may require SEO include:
 
 ```text
-Full-Stack Developer Roadmap
-
-HTML
-  ↓
-CSS
-  ↓
-JavaScript
-  ↓
-React / Next.js
-  ↓
-Python / Django
-  ↓
-Databases
-  ↓
-APIs
-  ↓
-Authentication
-  ↓
-Deployment
-  ↓
-Real-World Projects
-  ↓
-Career Preparation
+Courses
+Roadmaps
+Course Details
+Roadmap Details
+Blog
+Projects
+Mentors
+Jobs
+Internships
+Developer Profiles
 ```
 
-Students should be able to track their progress through each roadmap.
+Private dashboards do not require the same SEO treatment as public pages.
 
+---
 
+# 16. Component Rules
 
-# AI Coding Assistant
+Components should follow these principles.
 
-The AI Coding Assistant is a core feature of the CodeHouse Cloud ecosystem.
+## Reusability
 
-The assistant should help learners understand programming rather than simply provide solutions.
+Build components that can be reused.
 
-Users should be able to:
+## Single Responsibility
 
-* Ask programming questions.
-* Explain programming concepts.
-* Understand error messages.
-* Debug code.
-* Receive hints.
-* Review code.
-* Understand why code works.
-* Generate examples for learning.
-* Receive personalized explanations.
-* Get recommendations for relevant learning resources.
+A component should have a clear responsibility.
 
-Example:
+Avoid extremely large components.
+
+Instead of placing thousands of lines in one file, separate functionality where appropriate:
 
 ```text
-Student:
-Why am I getting this error in my Python code?
-
-AI Assistant:
-The error occurs because...
-
-The program expects...
-
-Try checking...
-
-You may want to review:
-→ Python Functions
-→ Python Variables
-→ Error Handling
+CourseHeader.tsx
+CourseCard.tsx
+CourseCurriculum.tsx
+CourseProgress.tsx
+CourseInstructor.tsx
 ```
 
-The AI interface may include:
+## Accessibility
 
-* Chat interface.
-* Code input.
-* Syntax highlighting.
-* Error explanations.
-* Suggested learning resources.
-* Conversation history.
-* Context-aware assistance.
+Use semantic HTML.
 
-The AI should function primarily as a **learning companion and coding tutor**.
+Prefer:
 
+```html
+<button>
+```
 
+instead of:
 
-# Coding Playground
+```html
+<div onclick="">
+```
 
-The Coding Playground allows students to practice programming directly inside the browser.
+Use semantic elements where appropriate:
 
-Potential features include:
+```html
+<nav>
+<header>
+<main>
+<section>
+<footer>
+```
 
-* Code editor.
-* File explorer.
-* Language selection.
-* Run code.
-* Reset code.
-* Console output.
-* Error messages.
-* Save progress.
-* Submit solutions.
-* Code execution results.
+All images should have meaningful `alt` text.
 
-Potential programming languages include:
+Forms must have accessible labels.
 
-* HTML.
-* CSS.
-* JavaScript.
-* Python.
-* Java.
-* C#.
-* C++.
+Interactive elements must be keyboard accessible.
 
-The final supported languages will depend on the backend code execution infrastructure.
+---
 
+# 17. Client and Server Components
 
+Next.js supports Server Components and Client Components.
 
-# Coding Challenges
+By default, components should remain Server Components unless client-side functionality is required.
 
-Coding challenges encourage consistent programming practice.
+Use:
 
-Challenge categories include:
+```tsx
+"use client";
+```
 
-* Daily Challenges.
-* Weekly Challenges.
-* Beginner Challenges.
-* Intermediate Challenges.
-* Advanced Challenges.
+only when necessary.
 
-Each challenge may display:
+Client Components may be required for:
 
-* Problem description.
-* Difficulty.
-* Supported language.
-* Time limit.
-* Code editor.
-* Test cases.
-* Submission status.
-* Score.
-* Ranking.
+* React state.
+* Event handlers.
+* Browser APIs.
+* Interactive forms.
+* Client-side hooks.
+* Real-time interfaces.
 
+Do not automatically add:
 
+```tsx
+"use client";
+```
 
-# Leaderboards
+to every component.
 
-Leaderboards encourage healthy participation and community engagement.
+Keep components server-side when possible.
 
-Possible ranking categories:
+---
 
-* Daily.
-* Weekly.
-* Monthly.
-* All-Time.
-* Course.
-* Coding Challenge.
+# 18. TypeScript Rules
 
-Leaderboard information may include:
+Use TypeScript types instead of `any`.
 
-* Username.
-* Profile image.
-* Points.
-* Challenges completed.
-* Projects completed.
-* Current rank.
+Avoid:
 
+```typescript
+const data: any = response;
+```
 
+Prefer:
 
-# Project Marketplace
+```typescript
+interface Course {
+  id: number;
+  title: string;
+  description: string;
+}
+```
 
-The Project Marketplace helps students move from theoretical learning to practical software development.
+Then:
 
-Students should be able to:
+```typescript
+const course: Course = response;
+```
 
-* Browse projects.
-* Search projects.
-* Filter by technology.
-* Filter by difficulty.
-* Create projects.
-* Join projects.
-* Form development teams.
-* View project requirements.
-* Track project progress.
-* Showcase completed projects.
-
-Potential projects include:
-
-* Web applications.
-* Mobile applications.
-* APIs.
-* AI applications.
-* Cloud applications.
-* Open-source projects.
-
-The Project Marketplace should help students build real portfolios demonstrating practical skills.
-
-
-
-# Mentorship Platform
-
-The Mentorship Platform connects learners with experienced developers.
-
-Students should be able to:
-
-* Browse mentors.
-* Search by specialization.
-* View mentor profiles.
-* Check availability.
-* Book mentorship sessions.
-* Manage appointments.
-* View session history.
-
-Mentor profiles may contain:
-
-* Name.
-* Profile photo.
-* Professional title.
-* Skills.
-* Experience.
-* Technologies.
-* Biography.
-* Availability.
-* Session details.
-
-
-
-# Career Center
-
-The Career Center connects education with employment opportunities.
-
-The frontend should provide:
-
-* Jobs.
-* Internships.
-* Junior developer opportunities.
-* Career resources.
-* Resume guidance.
-* Portfolio guidance.
-* Career preparation.
-
-Students should be able to:
-
-* Search opportunities.
-* Filter jobs.
-* Save jobs.
-* View job details.
-* Apply for opportunities.
-* Build professional developer profiles.
-
-Future functionality may include an Employer Talent Portal that allows companies to discover qualified CodeHouse Cloud graduates.
-
-
-
-# Community
-
-The CodeHouse Cloud Community provides a space where learners and developers can interact and collaborate.
-
-Potential functionality includes:
-
-* Discussion forums.
-* Programming questions.
-* Project discussions.
-* Study groups.
-* Technology discussions.
-* Announcements.
-* Peer support.
-
-Users should be able to:
-
-* Create posts.
-* Reply to discussions.
-* React to content.
-* Follow discussions.
-* Search community content.
-
-
-
-# Student Profile
-
-Every student should have a professional developer profile.
-
-The profile may include:
-
-* Profile photo.
-* Name.
-* Biography.
-* Skills.
-* Learning roadmap.
-* Completed courses.
-* Certificates.
-* Projects.
-* Coding achievements.
-* Challenge rankings.
-* GitHub profile.
-* LinkedIn profile.
-
-The long-term goal is to transform the student profile into a **developer portfolio and verified skills identity**.
-
-
-
-# Instructor Portal
-
-The Instructor Portal provides tools for educators to manage learning content and monitor students.
-
-Instructors should be able to:
-
-* Create courses.
-* Publish courses.
-* Upload videos.
-* Upload learning resources.
-* Create assignments.
-* Create quizzes.
-* Grade assessments.
-* Monitor student progress.
-* Manage live coding sessions.
-* Review submissions.
-* Issue certificates.
-* View student analytics.
-
-Example:
+Shared types should be stored in:
 
 ```text
-Instructor Dashboard
-│
-├── Overview
-├── My Courses
-├── Create Course
-├── Assignments
-├── Quizzes
-├── Students
-├── Analytics
-├── Live Sessions
-└── Certificates
+src/types/
 ```
 
+Examples:
 
+```text
+src/types/course.ts
+src/types/user.ts
+src/types/roadmap.ts
+```
 
-# Administrator Portal
+---
 
-The Administrator Portal provides centralized management of the CodeHouse Cloud platform.
+# 19. Naming Conventions
 
-Administrators should be able to manage:
+Use PascalCase for React components.
 
-* Users.
-* Students.
-* Instructors.
-* Mentors.
-* Courses.
-* Projects.
-* Payments.
-* Jobs.
-* Community content.
-* Support tickets.
-* AI services.
-* Analytics.
-* System settings.
-* Content moderation.
+Correct:
 
-Administrative functionality must be protected using role-based access control.
+```text
+CourseCard.tsx
+RoadmapCard.tsx
+MentorProfile.tsx
+```
 
+Use camelCase for functions and variables.
 
+Correct:
 
-# Authentication
+```typescript
+getCourses()
+fetchRoadmap()
+isLoading
+```
 
-The frontend should provide secure authentication flows.
+Use descriptive names.
 
-Required pages include:
+Avoid:
 
-* Sign Up.
-* Login.
-* Forgot Password.
-* Reset Password.
-* Email Verification.
-* Profile Setup.
-* Account Settings.
+```text
+data.ts
+stuff.ts
+test.ts
+component.tsx
+```
 
-Supported roles include:
+Prefer:
+
+```text
+courseService.ts
+roadmapService.ts
+CourseCard.tsx
+```
+
+---
+
+# 20. Styling Guidelines
+
+CodeHouse Cloud uses Tailwind CSS and the project's global design system.
+
+Follow the approved design system.
+
+Primary brand colors include:
+
+```text
+Primary Navy
+#050538
+
+Secondary Cyan
+#16C4E8
+
+White
+#FFFFFF
+```
+
+Typography includes:
+
+```text
+Poppins
+Roboto
+Fira Code
+```
+
+Do not introduce random colors or fonts without approval.
+
+Every feature should feel like part of the same CodeHouse Cloud product.
+
+---
+
+# 21. Responsive Design
+
+Every contributor is responsible for ensuring their feature works on:
+
+* Desktop.
+* Laptop.
+* Tablet.
+* Mobile.
+
+Test common screen sizes before submitting a Pull Request.
+
+Pay particular attention to:
+
+* Navigation.
+* Cards.
+* Tables.
+* Forms.
+* Modals.
+* Dashboards.
+* Code editors.
+* Sidebars.
+
+Do not design only for desktop.
+
+---
+
+# 22. Loading States
+
+API-driven pages must provide appropriate loading states.
+
+Examples:
+
+```text
+Loading courses...
+Loading roadmap...
+Loading mentors...
+```
+
+Use reusable loading components where available.
+
+Avoid leaving users with blank screens while data is loading.
+
+---
+
+# 23. Error Handling
+
+API failures must be handled gracefully.
+
+Users should receive clear information when:
+
+* An API request fails.
+* A page cannot load.
+* A form submission fails.
+* Authentication expires.
+* Data is unavailable.
+
+Avoid displaying raw technical errors to users.
+
+Instead of:
+
+```text
+500 Internal Server Error
+```
+
+provide a user-friendly message:
+
+```text
+We were unable to load the courses.
+Please try again.
+```
+
+---
+
+# 24. Empty States
+
+When no data exists, display a meaningful empty state.
+
+For example:
+
+```text
+No courses found.
+
+Try changing your search or filter.
+```
+
+Avoid showing blank pages.
+
+---
+
+# 25. Authentication and Authorization
+
+Authentication is handled centrally.
+
+Do not create independent authentication logic inside individual feature modules.
+
+The platform may support roles such as:
 
 ```text
 Student
@@ -814,409 +1247,829 @@ Employer
 Administrator
 ```
 
-The interface should dynamically adapt according to the authenticated user's role and permissions.
+Access to protected features must be controlled through the application's authentication and authorization architecture.
 
+Do not assume that hiding a button provides security.
 
+Authorization must ultimately be enforced by the Django backend.
 
-# Design System
+The frontend provides the appropriate user experience, but the backend remains the final authority for permissions.
 
-## Color Palette
+---
 
-| Color          | Hex       | Usage                                        |
-| -------------- | --------- | -------------------------------------------- |
-| Primary Navy   | `#050538` | Header, footer, navigation, hero backgrounds |
-| Secondary Cyan | `#16C4E8` | Buttons, links, icons, highlights            |
-| White          | `#FFFFFF` | Cards, backgrounds, content areas            |
+# 26. API Security
 
-## Typography
+The frontend must never assume that an API endpoint is secure simply because a button is hidden.
 
-| Font      | Usage                                  |
-| --------- | -------------------------------------- |
-| Poppins   | Headings, navigation, buttons          |
-| Roboto    | Body content and paragraphs            |
-| Fira Code | Programming examples and code snippets |
-
-The design language should communicate:
-
-* Technology.
-* Intelligence.
-* Innovation.
-* Education.
-* Professionalism.
-* Accessibility.
-* African-centered innovation.
-
-
-
-# Responsive Design
-
-The frontend must provide a consistent experience across:
-
-* Desktop.
-* Laptop.
-* Tablet.
-* Mobile devices.
-
-The mobile experience should prioritize:
-
-* Simplified navigation.
-* Touch-friendly controls.
-* Responsive cards.
-* Readable typography.
-* Optimized coding interfaces.
-* Accessible dashboards.
-* Fast loading times.
-
-The frontend should follow a mobile-first approach where appropriate.
-
-
-
-# Accessibility
-
-The frontend should follow modern accessibility principles.
-
-Requirements include:
-
-* Semantic HTML5.
-* Keyboard navigation.
-* Alternative text for images.
-* Sufficient color contrast.
-* Accessible forms.
-* Readable typography.
-* Visible focus states.
-* Responsive layouts.
-* Descriptive buttons and links.
-
-Accessibility should be considered throughout the development lifecycle.
-
-
-
-# Technology Stack
-
-## Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-* ES Modules
-* React.js
-* Next.js
-* Tailwind CSS / CSS
-* Git
-* GitHub
-
-## Backend
-
-* Django
-* Python
-* REST APIs
-
-## Database
-
-* MySQL
-
-## Cloud Storage
-
-* Cloudinary
-
-## Payments
-
-* Paystack
-
-## Artificial Intelligence
-
-* OpenAI API
-
-## Version Control
-
-* Git
-* GitHub
-
-## Deployment
-
-* Cloud Hosting
-
-
-
-# API Integration
-
-The frontend will communicate with backend services through APIs.
-
-Potential API modules include:
+Never trust the following as the only security mechanism:
 
 ```text
-/api/auth/
-/api/users/
-/api/courses/
-/api/roadmaps/
-/api/lessons/
-/api/assignments/
-/api/quizzes/
-/api/progress/
-/api/ai/
-/api/coding/
-/api/challenges/
-/api/projects/
-/api/mentorship/
-/api/jobs/
-/api/community/
-/api/payments/
-/api/certificates/
+Frontend role checks
+Frontend route restrictions
+Hidden UI elements
 ```
 
-API communication should be separated from UI components to maintain a scalable and maintainable frontend architecture.
+The backend must validate:
 
+* Authentication.
+* Authorization.
+* User permissions.
+* Resource ownership.
 
+---
 
-# Frontend State and User Experience
+# 27. Working With the Django Backend
 
-The application should provide clear feedback for major user actions.
+The Next.js frontend and Django backend are separate applications.
 
-The frontend should support:
+```text
+CodeHouse Cloud
+│
+├── Next.js Frontend
+│
+└── Django REST API
+```
 
-* Loading states.
-* Empty states.
-* Success messages.
-* Error messages.
-* Form validation.
-* API failure handling.
-* Authentication states.
-* Progress indicators.
+Frontend contributors should not modify backend code unless explicitly assigned backend work.
 
-Users should always understand:
+If a frontend feature requires a new API endpoint:
 
-1. What is happening.
-2. What action was completed.
-3. What went wrong.
-4. What they can do next.
+1. Document the required endpoint.
+2. Explain the expected request.
+3. Explain the expected response.
+4. Coordinate with the backend team.
+5. Wait for the API contract to be confirmed.
+6. Implement the frontend integration.
 
+Example:
 
+```text
+GET /api/courses/
+```
 
-# Performance
+Response:
 
-The frontend should prioritize performance and usability.
+```json
+{
+  "results": [
+    {
+      "id": 1,
+      "title": "Python Fundamentals",
+      "slug": "python-fundamentals"
+    }
+  ]
+}
+```
 
-Performance goals include:
+The frontend should integrate against the agreed API contract.
 
-* Fast initial page loading.
+---
+
+# 28. Do Not Mix Frontend and Backend Responsibilities
+
+The frontend should handle:
+
+* User interface.
+* User experience.
+* Client-side interaction.
+* Presentation.
+* API consumption.
+
+The backend should handle:
+
+* Authentication.
+* Authorization.
+* Business rules.
+* Database operations.
+* Sensitive processing.
+* Secure payment operations.
+* AI secret keys.
+* Data validation.
+
+Never place sensitive business logic exclusively in the frontend.
+
+---
+
+# 29. Contributor Ownership
+
+Each contributor should be assigned a specific feature or module.
+
+Examples:
+
+```text
+Courses
+Roadmaps
+AI
+Coding Playground
+Challenges
+Projects
+Mentorship
+Career
+Community
+```
+
+A contributor assigned to Courses should primarily work in:
+
+```text
+🟢 src/app/(public)/courses/
+🟢 src/components/courses/
+🟢 src/services/courseService.ts
+🟢 src/hooks/useCourses.ts
+🟢 src/types/course.ts
+```
+
+A contributor assigned to Roadmaps should primarily work in:
+
+```text
+🟢 src/app/(public)/roadmaps/
+🟢 src/components/roadmaps/
+🟢 src/services/roadmapService.ts
+🟢 src/types/roadmap.ts
+```
+
+A contributor assigned to Mentorship should primarily work in:
+
+```text
+🟢 src/app/(public)/mentorship/
+🟢 src/components/mentorship/
+🟢 src/services/mentorshipService.ts
+```
+
+Do not modify unrelated modules.
+
+Feature ownership does not mean permanent ownership. It means the contributor is responsible for implementing the assigned feature according to project requirements.
+
+All code remains part of the CodeHouse Cloud project.
+
+---
+
+# 30. Git Branching Strategy
+
+The repository uses protected branches.
+
+The recommended structure is:
+
+```text
+main
+│
+└── development
+      │
+      ├── feature/homepage
+      ├── feature/courses
+      ├── feature/roadmaps
+      ├── feature/ai-assistant
+      ├── feature/projects
+      ├── feature/mentorship
+      └── feature/community
+```
+
+The exact branch strategy may be adjusted by project maintainers.
+
+Always follow the current branch protection and repository rules.
+
+---
+
+# 31. Creating a Branch
+
+Before creating a branch, update your local repository.
+
+```bash
+git checkout development
+```
+
+Then:
+
+```bash
+git pull origin development
+```
+
+Create your feature branch:
+
+```bash
+git checkout -b feature/courses-page
+```
+
+Examples:
+
+```bash
+git checkout -b feature/roadmaps-page
+git checkout -b feature/ai-assistant
+git checkout -b feature/project-marketplace
+git checkout -b feature/mentor-profile
+```
+
+Use clear branch names.
+
+---
+
+# 32. Branch Naming
+
+Recommended prefixes:
+
+```text
+feature/
+bugfix/
+hotfix/
+refactor/
+docs/
+chore/
+```
+
+Examples:
+
+```text
+feature/courses-page
+feature/roadmap-details
+feature/ai-chat-interface
+bugfix/course-card-mobile
+bugfix/navbar-menu
+refactor/api-client
+docs/contributor-guidelines
+chore/update-dependencies
+```
+
+---
+
+# 33. Commit Messages
+
+Use clear commit messages.
+
+Good:
+
+```text
+feat: add courses page
+```
+
+```text
+feat: add roadmap card component
+```
+
+```text
+fix: resolve mobile navigation issue
+```
+
+```text
+refactor: simplify course API service
+```
+
+```text
+docs: update contributor guidelines
+```
+
+Avoid:
+
+```text
+update
+changes
+fixed stuff
+final
+```
+
+Commits should clearly explain what changed.
+
+---
+
+# 34. Pull Requests
+
+When your work is complete:
+
+```bash
+git status
+```
+
+Review your changes.
+
+Then:
+
+```bash
+git add .
+```
+
+Commit:
+
+```bash
+git commit -m "feat: add courses page"
+```
+
+Push:
+
+```bash
+git push origin feature/courses-page
+```
+
+Open a Pull Request on GitHub.
+
+Your Pull Request should contain:
+
+### Description
+
+Explain what you built.
+
+### Changes
+
+List the main changes.
+
+### Testing
+
+Explain how you tested the feature.
+
+### Screenshots
+
+For UI changes, provide screenshots where appropriate.
+
+### API Dependencies
+
+Mention any required backend endpoints.
+
+### Known Issues
+
+Mention any incomplete functionality.
+
+---
+
+# 35. Pull Request Example
+
+## Title
+
+```text
+feat: add courses listing page
+```
+
+## Description
+
+```text
+## Overview
+
+Implemented the CodeHouse Cloud courses listing page.
+
+## Changes
+
+- Added courses page
+- Added course cards
+- Added course filtering UI
+- Added responsive layout
+- Added loading state
+- Added empty state
+
+## Testing
+
+Tested on:
+- Desktop
+- Tablet
+- Mobile
+
+## API
+
+Uses:
+GET /api/courses/
+
+## Screenshots
+
+Attached below.
+```
+
+---
+
+# 36. Before Opening a Pull Request
+
+Before creating a Pull Request, confirm:
+
+```text
+[ ] I created a feature branch.
+[ ] I did not work directly on main.
+[ ] I pulled the latest development branch.
+[ ] My feature works locally.
+[ ] My feature is responsive.
+[ ] I tested desktop.
+[ ] I tested mobile.
+[ ] I checked for console errors.
+[ ] I checked for TypeScript errors.
+[ ] I did not commit .env.local.
+[ ] I did not expose secret keys.
+[ ] I did not hardcode API URLs.
+[ ] I used the centralized API client.
+[ ] I reused existing shared components.
+[ ] I added loading states where necessary.
+[ ] I added error handling where necessary.
+[ ] I added empty states where necessary.
+[ ] I checked accessibility.
+[ ] I reviewed my own code.
+[ ] I provided screenshots for UI changes.
+```
+
+---
+
+# 37. Files Contributors Must Not Commit
+
+Never commit:
+
+```text
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+```
+
+Never commit:
+
+```text
+node_modules/
+```
+
+Never commit:
+
+```text
+.next/
+```
+
+Never commit:
+
+```text
+API keys
+Private keys
+Database credentials
+Secret tokens
+Passwords
+```
+
+The `.gitignore` file should protect these files.
+
+---
+
+# 38. Do Not Change Core Infrastructure Without Approval
+
+Before modifying any of the following, contact the project maintainer:
+
+```text
+🔴 package.json
+🔴 next.config.ts
+🔴 tsconfig.json
+
+🔴 src/app/layout.tsx
+🔴 src/app/globals.css
+
+🔴 src/lib/api.ts
+🔴 src/lib/auth.ts
+
+🔴 src/context/AuthContext.tsx
+
+🔴 src/types/api.ts
+🔴 src/config/siteConfig.ts
+
+🔴 middleware.ts
+🔴 .env.example
+```
+
+Also contact the maintainer before:
+
+* Adding a new dependency.
+* Changing authentication.
+* Changing API architecture.
+* Changing the global design system.
+* Changing routing architecture.
+* Changing environment variable names.
+* Changing deployment configuration.
+
+---
+
+# 39. Adding New Dependencies
+
+Do not install packages simply because they are convenient.
+
+Before adding a dependency:
+
+1. Check whether the functionality already exists.
+2. Check whether the project already has a library that solves the problem.
+3. Discuss the dependency with the maintainer.
+4. Explain why it is necessary.
+5. Consider bundle size and performance.
+6. Consider security and maintenance.
+
+Do not install another UI framework if the project already uses Tailwind CSS and an approved component system without prior approval.
+
+---
+
+# 40. Performance Guidelines
+
+Contributors should consider performance when building features.
+
+Use:
+
 * Optimized images.
 * Lazy loading where appropriate.
-* Code splitting.
+* Server Components where possible.
+* Code splitting where appropriate.
 * Efficient API requests.
+* Pagination for large datasets.
 * Caching where appropriate.
-* Responsive design.
-* Optimized assets.
 
-The platform should aim for strong Lighthouse scores in:
+Avoid:
 
+* Unnecessary client components.
+* Unnecessary API calls.
+* Huge images.
+* Repeated API requests.
+* Large dependencies without justification.
+
+---
+
+# 41. Accessibility Guidelines
+
+All contributors are responsible for accessibility.
+
+Follow:
+
+* Semantic HTML.
+* Keyboard navigation.
+* Visible focus states.
+* Meaningful `alt` text.
+* Accessible forms.
+* Proper labels.
+* Sufficient color contrast.
+* Descriptive buttons.
+* Accessible navigation.
+
+Do not rely on color alone to communicate information.
+
+---
+
+# 42. Code Review
+
+Every Pull Request may be reviewed for:
+
+* Functionality.
+* Code quality.
+* Security.
 * Performance.
 * Accessibility.
-* Best Practices.
-* SEO.
+* Responsiveness.
+* TypeScript correctness.
+* API integration.
+* Maintainability.
+* Consistency with the design system.
 
+Reviewers may request changes.
 
+Contributors are expected to respond professionally to review comments.
 
-# SEO
+Code review is part of collaborative development and is not a personal criticism.
 
-Public-facing pages should be optimized for search engines.
+---
 
-The frontend should support:
+# 43. Do Not Merge Your Own Pull Request Without Approval
 
-* Page titles.
-* Meta descriptions.
-* Open Graph metadata.
-* Canonical URLs.
-* Structured data where appropriate.
-* Semantic HTML.
-* XML sitemap.
-* Search-friendly URLs.
+Unless you are an authorized maintainer, do not merge your own Pull Request.
 
-SEO-optimized public pages may include:
+Wait for the required review and approval.
 
-* Courses.
-* Learning roadmaps.
-* Blog posts.
-* Projects.
-* Mentors.
-* Jobs.
-* Internships.
+The project may require:
 
+* Successful CI checks.
+* At least one approval.
+* No unresolved review comments.
+* Passing build.
+* Passing lint checks.
 
+---
 
-# Security
+# 44. If You Discover a Problem
 
-The frontend should follow secure development practices.
+If you discover an issue outside your assigned feature:
 
-Security considerations include:
+Do not immediately modify unrelated code.
 
-* HTTPS.
-* Secure authentication.
-* Role-based access control.
-* Secure API communication.
-* Protected routes.
-* Input validation.
-* Secure token handling.
-* Payment security.
-* Privacy protection.
+Instead:
 
-The frontend must never expose:
+1. Document the issue.
+2. Create an issue if appropriate.
+3. Inform the maintainer.
+4. Fix it only if authorized.
 
-* API keys.
-* Secret keys.
-* Database credentials.
-* Private configuration values.
-* Sensitive authentication credentials.
+This prevents contributors from unintentionally changing another developer's work.
 
+---
 
+# 45. Avoid Unnecessary Refactoring
 
-# Development Principles
+Do not rewrite existing code simply because you prefer a different coding style.
 
-## Component-Based Architecture
+For example, if you are assigned to:
 
-Build reusable components for:
+```text
+Courses
+```
 
-* Buttons.
-* Cards.
-* Forms.
-* Navigation.
-* Modals.
-* Dashboards.
-* Tables.
-* Course interfaces.
-* AI interfaces.
+do not simultaneously rewrite:
 
-## Reusability
+```text
+Header
+Footer
+Authentication
+API Client
+Global CSS
+```
 
-Avoid duplicating UI and business logic.
+unless your task specifically includes those areas.
 
-## Scalability
+Keep Pull Requests focused.
 
-The frontend should support new modules without requiring major architectural changes.
+Focused Pull Requests are easier to review and merge.
 
-## Maintainability
+---
 
-Use clear naming conventions and organized project structures.
+# 46. Communication
 
-## Accessibility
+Before starting a major feature:
 
-Accessibility should be part of the development process from the beginning.
+1. Read the project documentation.
+2. Check existing issues.
+3. Check existing Pull Requests.
+4. Confirm your assignment.
+5. Ask questions when requirements are unclear.
 
-## Performance
+Do not duplicate work already being done by another contributor.
 
-Optimize components, API requests, and assets.
+---
 
-## User-Centered Design
+# 47. Contributor Definition of Done
 
-Every feature should solve a clear problem for a learner, instructor, mentor, employer, or administrator.
+A feature is considered complete when:
 
-
-
-# Development Roadmap
-
-## Phase 1 — Brand and UI Foundation
-
-* Rebrand CodeHouse Cloud.
-* Establish the design system.
-* Build responsive navigation.
-* Create reusable components.
-* Redesign homepage.
-* Implement authentication interfaces.
-
-## Phase 2 — Learning Experience
-
-* Course catalog.
-* Course details.
-* Learning roadmaps.
-* Student dashboard.
-* Course player.
-* Progress tracking.
-* Assignments.
-* Quizzes.
-
-## Phase 3 — AI and Coding
-
-* AI Coding Assistant.
-* Coding Playground.
-* Daily Challenges.
-* Weekly Challenges.
-* Leaderboards.
-
-## Phase 4 — Projects and Community
-
-* Project Marketplace.
-* Collaborative projects.
-* Developer profiles.
-* Community forum.
-
-## Phase 5 — Career and Mentorship
-
-* Mentorship Platform.
-* Career Center.
-* Jobs and internships.
-* Employer profiles.
-* Developer talent profiles.
-
-## Phase 6 — Advanced Ecosystem
-
-* Instructor Portal.
-* Administrator Portal.
-* Advanced analytics.
-* AI personalization.
-* Mobile applications.
-* Cloud IDE.
-* Employer Talent Portal.
-
-
-
-# Future Enhancements
-
-Planned future capabilities include:
-
-* Android application.
-* iOS application.
-* Offline learning.
-* Virtual coding laboratories.
-* AI pair programming.
-* Cloud IDE.
-* Advanced AI tutoring.
-* Blockchain-based certificates.
-* Virtual reality coding classrooms.
-* Employer Talent Portal.
-* International certification programs.
-* Advanced developer portfolios.
-* AI-powered career recommendations.
-
-
-
-# Success Metrics
-
-The redesigned frontend should be evaluated using measurable outcomes.
-
-Key metrics include:
-
-* User registration rate.
-* Course enrollment rate.
-* Course completion rate.
-* Learning roadmap completion.
-* Coding challenge participation.
-* AI Coding Assistant usage.
-* Coding Playground usage.
-* Number of completed projects.
-* Mentorship bookings.
-* Community engagement.
-* Certificate completion.
-* Job and internship applications.
-* Student retention.
-
-
-
-# Product Philosophy
-
-CodeHouse Cloud is not simply a website for watching programming courses.
-
-It is designed as a complete **software engineering development ecosystem**.
-
-The frontend should guide learners through the complete journey:
+```text
+[ ] The feature matches the requirements.
+[ ] The feature works correctly.
+[ ] The feature is responsive.
+[ ] The feature is accessible.
+[ ] The feature uses the approved design system.
+[ ] API integration works correctly.
+[ ] Loading states are handled.
+[ ] Error states are handled.
+[ ] Empty states are handled.
+[ ] TypeScript errors are resolved.
+[ ] Console errors are resolved.
+[ ] No secrets are exposed.
+[ ] No API URLs are hardcoded.
+[ ] Code is documented where necessary.
+[ ] Pull Request is ready for review.
+```
+
+---
+
+# 48. Recommended Contributor Workflow
+
+Every contributor should follow this process:
+
+```text
+1. Read CONTRIBUTING.md / GUIDELINES.md
+        ↓
+2. Understand your assigned feature
+        ↓
+3. Check the permission markers
+        ↓
+4. Pull the latest development branch
+        ↓
+5. Create a feature branch
+        ↓
+6. Build only the assigned feature
+        ↓
+7. Reuse existing shared components
+        ↓
+8. Use centralized API services
+        ↓
+9. Test the feature
+        ↓
+10. Check responsive behavior
+        ↓
+11. Check accessibility
+        ↓
+12. Check TypeScript and lint
+        ↓
+13. Review your own changes
+        ↓
+14. Commit changes
+        ↓
+15. Push feature branch
+        ↓
+16. Open Pull Request
+        ↓
+17. Respond to code review
+        ↓
+18. Obtain approval
+        ↓
+19. Merge according to repository rules
+```
+
+---
+
+# 49. Permission Summary
+
+Before modifying any file, check its permission marker.
+
+```text
+┌──────────────────────────────────────────────┐
+│ 🔴 PROTECTED                                 │
+│ Do not modify without authorization.         │
+└──────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────┐
+│ 🟢 CONTRIBUTOR                               │
+│ Work here when the feature is assigned.     │
+└──────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────┐
+│ 🟠 ASSIGNMENT REQUIRED                       │
+│ Modify only when specifically assigned.     │
+└──────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────┐
+│ 🔵 SHARED                                    │
+│ Reuse existing code. Avoid duplication.     │
+└──────────────────────────────────────────────┘
+```
+
+### 🔴 Protected
+
+Do not modify without authorization.
+
+### 🟢 Contributor
+
+Contributors can work here when the relevant feature has been assigned to them.
+
+### 🟠 Assignment Required
+
+Contributors need explicit assignment or approval before modifying these areas.
+
+### 🔵 Shared
+
+Reuse these components and utilities. Avoid creating duplicate implementations.
+
+---
+
+# 50. Final Contributor Rule
+
+> **Do not modify protected files simply because you have access to the repository.**
+
+Repository access allows you to contribute to the project. It does not mean every file is available for unrestricted modification.
+
+Always work within the scope of your assigned feature.
+
+If your feature requires a change to a 🔴 protected or 🟠 assignment-required file, contact the project maintainer before making the change.
+
+> **Build your assigned feature. Reuse the shared architecture. Do not duplicate core functionality. Do not expose secrets. Do not hardcode API configuration. Do not modify protected infrastructure without approval. Always work through a feature branch and Pull Request.**
+
+---
+
+# 51. Final Architecture Principle
+
+The CodeHouse Cloud frontend should follow this architecture:
+
+```text
+                         CodeHouse Cloud
+                                │
+                                ▼
+                        Next.js Application
+                                │
+             ┌──────────────────┼──────────────────┐
+             │                  │                  │
+             ▼                  ▼                  ▼
+         Public              Student           Admin /
+         Website             Platform          Instructor
+             │                  │                  │
+             └──────────────────┼──────────────────┘
+                                │
+                                ▼
+                         Shared Components
+                                │
+                                ▼
+                          API Client Layer
+                                │
+                                ▼
+                         Django REST API
+                                │
+                                ▼
+                         Backend Services
+```
+
+The frontend should be:
+
+* Modular.
+* Reusable.
+* Scalable.
+* Secure.
+* Accessible.
+* Responsive.
+* Maintainable.
+* Well documented.
+* Consistent with the CodeHouse Cloud product vision.
+
+---
+
+# 52. CodeHouse Cloud Development Philosophy
+
+The goal is not simply to build pages.
+
+The goal is to build a professional software engineering platform that learners can use to:
 
 ```text
 Discover
@@ -1246,17 +2099,22 @@ Find Jobs & Internships
 Become an Industry-Ready Developer
 ```
 
-The ultimate goal is to create a platform where learners do not simply **consume educational content**, but actively **develop the skills, experience, portfolio, network, and confidence required to build successful careers in software engineering**.
+Every contributor plays a role in building this ecosystem.
 
+Write code that is:
 
+* Clean.
+* Reusable.
+* Accessible.
+* Secure.
+* Maintainable.
+* Scalable.
+* Well documented.
+* Consistent with the CodeHouse Cloud product vision.
 
-# License
+**Learn. Code. Build. Collaborate. Grow.**
 
-This project and its source code are proprietary to **CodeHouse Cloud / Applinet Technology** unless otherwise specified.
-
-Unauthorized copying, redistribution, or commercial use is prohibited without written permission from the project owners.
-
-
+---
 
 # Contact
 
@@ -1264,6 +2122,6 @@ Unauthorized copying, redistribution, or commercial use is prohibited without wr
 
 Website: https://www.codehouse.cloud
 
-A product of **Applinet Technology**.
+Repository: https://github.com/CodeHouse-Cloud/codehouse.git
 
-> **Learn. Code. Build. Collaborate. Grow.**
+A product of **Applinet Technology**.
