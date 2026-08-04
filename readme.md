@@ -2,17 +2,22 @@
 
 ## AI-Powered Software Engineering Academy
 
-**Project:** CodeHouse Cloud
-**Website:** https://www.codehouse.cloud
-**Frontend:** Next.js, React, TypeScript, Tailwind CSS
-**Backend:** Django / Django REST Framework
-**Repository:** https://github.com/CodeHouse-Cloud/codehouse.git
+# CodeHouse Cloud
+
+**Project:** CodeHouse Cloud  
+**Website:** https://www.codehouse.cloud  
+**Frontend:** Next.js, React, TypeScript, Tailwind CSS  
+**Backend:** Django / Django REST Framework  
+**Repository:** https://github.com/CodeHouse-Cloud/codehouse.git  
+**Site Plan:** https://my.codehouse.cloud
+
+[DETAILED SITE PLAN](SITEPLAN.md)
 
 ---
 
 # 1. Welcome to CodeHouse Cloud
 
-Welcome to the CodeHouse Cloud frontend development team.
+Welcome to the CodeHouse Cloud development team.
 
 CodeHouse Cloud is being reimagined as an **AI-powered software engineering academy** designed to help learners progress from complete beginners to industry-ready software engineers.
 
@@ -35,7 +40,7 @@ The goal of this repository is to build a scalable, accessible, responsive, secu
 
 The frontend communicates with the CodeHouse Cloud Django backend through REST APIs.
 
----
+
 
 # 2. Permission Legend
 
@@ -50,7 +55,7 @@ The project structure uses four permission levels.
 
 > **Important:** A contributor's permission is determined by their assigned task. Having access to the GitHub repository does not automatically mean that every file may be modified.
 
----
+
 
 # 3. Important Rule Before You Start Coding
 
@@ -97,7 +102,7 @@ Never push directly to `main` unless you are an authorized repository maintainer
 
 Before starting work, always check the current repository branch strategy and follow the branch required by the project maintainer.
 
----
+
 
 # 4. Technology Stack
 
@@ -144,7 +149,7 @@ Depending on the feature, the platform may integrate with:
 * Email services
 * Other approved third-party services
 
----
+
 
 # 5. Project Architecture
 
@@ -396,7 +401,7 @@ codehouse-cloud/
 
 > **Note:** A permission marker on a directory applies to the files and subdirectories within it unless a more specific marker is shown.
 
----
+
 
 # 6. Understanding the Project Structure
 
@@ -438,7 +443,7 @@ represents URLs such as:
 /courses/react
 ```
 
----
+
 
 ## `src/components/`
 
@@ -454,7 +459,7 @@ components/mentorship/MentorCard.tsx
 
 Components should be reusable wherever possible.
 
----
+
 
 ## `src/lib/`
 
@@ -473,7 +478,7 @@ Core infrastructure is protected.
 
 Contributors should not modify protected files unless specifically assigned.
 
----
+
 
 ## `src/services/`
 
@@ -489,7 +494,7 @@ projectService.ts
 
 Services should communicate with the centralized API layer rather than hardcoding API URLs.
 
----
+
 
 ## `src/hooks/`
 
@@ -503,7 +508,7 @@ useCourses.ts
 useDebounce.ts
 ```
 
----
+
 
 ## `src/context/`
 
@@ -518,7 +523,7 @@ AppContext.tsx
 
 Authentication-related context is protected.
 
----
+
 
 ## `src/types/`
 
@@ -534,7 +539,7 @@ project.ts
 api.ts
 ```
 
----
+
 
 # 7. 🔴 Protected Areas
 
@@ -575,7 +580,7 @@ These files may affect multiple features or the entire application.
 
 Changing them without coordination can break multiple modules.
 
----
+
 
 # 8. 🟢 Contributor Areas
 
@@ -617,7 +622,7 @@ For example, a contributor assigned to Courses may work primarily on:
 
 The contributor should avoid modifying unrelated modules.
 
----
+
 
 # 9. 🟠 Assignment Required Areas
 
@@ -657,7 +662,7 @@ Examples:
 
 If your assigned task does not involve these areas, do not modify them.
 
----
+
 
 # 10. 🔵 Shared Components and Infrastructure
 
@@ -698,7 +703,7 @@ already meets the requirement.
 
 If a shared component needs improvement, discuss the change before modifying it.
 
----
+
 
 # 11. API Integration Rules
 
@@ -753,7 +758,7 @@ Django REST API
 
 Do not duplicate API request logic across multiple components.
 
----
+
 
 # 12. API Services
 
@@ -780,7 +785,7 @@ courseService.ts
 
 rather than being repeated throughout multiple page components.
 
----
+
 
 # 13. Environment Variables and Security
 
@@ -825,7 +830,7 @@ The repository may contain:
 
 The `.env.example` file should contain variable names only, not private credentials.
 
----
+
 
 ## Important `NEXT_PUBLIC_` Rule
 
@@ -851,7 +856,7 @@ NEXT_PUBLIC_OPENAI_API_KEY=secret-key
 
 Private secrets must remain server-side.
 
----
+
 
 # 14. Header and Footer
 
@@ -885,7 +890,7 @@ Do not do this inside a page if the page already belongs to the public layout:
 
 The layout should automatically provide the Header and Footer.
 
----
+
 
 # 15. Page Metadata and SEO
 
@@ -929,7 +934,7 @@ Developer Profiles
 
 Private dashboards do not require the same SEO treatment as public pages.
 
----
+
 
 # 16. Component Rules
 
@@ -987,7 +992,7 @@ Forms must have accessible labels.
 
 Interactive elements must be keyboard accessible.
 
----
+
 
 # 17. Client and Server Components
 
@@ -1022,7 +1027,7 @@ to every component.
 
 Keep components server-side when possible.
 
----
+
 
 # 18. TypeScript Rules
 
@@ -1064,7 +1069,7 @@ src/types/user.ts
 src/types/roadmap.ts
 ```
 
----
+
 
 # 19. Naming Conventions
 
@@ -1107,7 +1112,7 @@ roadmapService.ts
 CourseCard.tsx
 ```
 
----
+
 
 # 20. Styling Guidelines
 
@@ -1140,7 +1145,7 @@ Do not introduce random colors or fonts without approval.
 
 Every feature should feel like part of the same CodeHouse Cloud product.
 
----
+
 
 # 21. Responsive Design
 
@@ -1166,7 +1171,7 @@ Pay particular attention to:
 
 Do not design only for desktop.
 
----
+
 
 # 22. Loading States
 
@@ -1184,7 +1189,7 @@ Use reusable loading components where available.
 
 Avoid leaving users with blank screens while data is loading.
 
----
+
 
 # 23. Error Handling
 
@@ -1213,7 +1218,7 @@ We were unable to load the courses.
 Please try again.
 ```
 
----
+
 
 # 24. Empty States
 
@@ -1229,7 +1234,7 @@ Try changing your search or filter.
 
 Avoid showing blank pages.
 
----
+
 
 # 25. Authentication and Authorization
 
@@ -1255,7 +1260,7 @@ Authorization must ultimately be enforced by the Django backend.
 
 The frontend provides the appropriate user experience, but the backend remains the final authority for permissions.
 
----
+
 
 # 26. API Security
 
@@ -1276,7 +1281,7 @@ The backend must validate:
 * User permissions.
 * Resource ownership.
 
----
+
 
 # 27. Working With the Django Backend
 
@@ -1323,7 +1328,7 @@ Response:
 
 The frontend should integrate against the agreed API contract.
 
----
+
 
 # 28. Do Not Mix Frontend and Backend Responsibilities
 
@@ -1348,7 +1353,7 @@ The backend should handle:
 
 Never place sensitive business logic exclusively in the frontend.
 
----
+
 
 # 29. Contributor Ownership
 
@@ -1401,7 +1406,7 @@ Feature ownership does not mean permanent ownership. It means the contributor is
 
 All code remains part of the CodeHouse Cloud project.
 
----
+
 
 # 30. Git Branching Strategy
 
@@ -1427,7 +1432,7 @@ The exact branch strategy may be adjusted by project maintainers.
 
 Always follow the current branch protection and repository rules.
 
----
+
 
 # 31. Creating a Branch
 
@@ -1460,7 +1465,7 @@ git checkout -b feature/mentor-profile
 
 Use clear branch names.
 
----
+
 
 # 32. Branch Naming
 
@@ -1488,7 +1493,7 @@ docs/contributor-guidelines
 chore/update-dependencies
 ```
 
----
+
 
 # 33. Commit Messages
 
@@ -1527,7 +1532,7 @@ final
 
 Commits should clearly explain what changed.
 
----
+
 
 # 34. Pull Requests
 
@@ -1585,7 +1590,7 @@ Mention any required backend endpoints.
 
 Mention any incomplete functionality.
 
----
+
 
 # 35. Pull Request Example
 
@@ -1628,7 +1633,7 @@ GET /api/courses/
 Attached below.
 ```
 
----
+
 
 # 36. Before Opening a Pull Request
 
@@ -1657,7 +1662,7 @@ Before creating a Pull Request, confirm:
 [ ] I provided screenshots for UI changes.
 ```
 
----
+
 
 # 37. Files Contributors Must Not Commit
 
@@ -1695,7 +1700,7 @@ Passwords
 
 The `.gitignore` file should protect these files.
 
----
+
 
 # 38. Do Not Change Core Infrastructure Without Approval
 
@@ -1731,7 +1736,7 @@ Also contact the maintainer before:
 * Changing environment variable names.
 * Changing deployment configuration.
 
----
+
 
 # 39. Adding New Dependencies
 
@@ -1748,7 +1753,7 @@ Before adding a dependency:
 
 Do not install another UI framework if the project already uses Tailwind CSS and an approved component system without prior approval.
 
----
+
 
 # 40. Performance Guidelines
 
@@ -1772,7 +1777,7 @@ Avoid:
 * Repeated API requests.
 * Large dependencies without justification.
 
----
+
 
 # 41. Accessibility Guidelines
 
@@ -1792,7 +1797,7 @@ Follow:
 
 Do not rely on color alone to communicate information.
 
----
+
 
 # 42. Code Review
 
@@ -1815,7 +1820,7 @@ Contributors are expected to respond professionally to review comments.
 
 Code review is part of collaborative development and is not a personal criticism.
 
----
+
 
 # 43. Do Not Merge Your Own Pull Request Without Approval
 
@@ -1831,7 +1836,7 @@ The project may require:
 * Passing build.
 * Passing lint checks.
 
----
+
 
 # 44. If You Discover a Problem
 
@@ -1848,7 +1853,7 @@ Instead:
 
 This prevents contributors from unintentionally changing another developer's work.
 
----
+
 
 # 45. Avoid Unnecessary Refactoring
 
@@ -1876,7 +1881,7 @@ Keep Pull Requests focused.
 
 Focused Pull Requests are easier to review and merge.
 
----
+
 
 # 46. Communication
 
@@ -1890,7 +1895,7 @@ Before starting a major feature:
 
 Do not duplicate work already being done by another contributor.
 
----
+
 
 # 47. Contributor Definition of Done
 
@@ -1914,7 +1919,7 @@ A feature is considered complete when:
 [ ] Pull Request is ready for review.
 ```
 
----
+
 
 # 48. Recommended Contributor Workflow
 
@@ -1960,7 +1965,7 @@ Every contributor should follow this process:
 19. Merge according to repository rules
 ```
 
----
+
 
 # 49. Permission Summary
 
@@ -2004,7 +2009,7 @@ Contributors need explicit assignment or approval before modifying these areas.
 
 Reuse these components and utilities. Avoid creating duplicate implementations.
 
----
+
 
 # 50. Final Contributor Rule
 
@@ -2018,7 +2023,7 @@ If your feature requires a change to a 🔴 protected or 🟠 assignment-require
 
 > **Build your assigned feature. Reuse the shared architecture. Do not duplicate core functionality. Do not expose secrets. Do not hardcode API configuration. Do not modify protected infrastructure without approval. Always work through a feature branch and Pull Request.**
 
----
+
 
 # 51. Final Architecture Principle
 
@@ -2063,7 +2068,7 @@ The frontend should be:
 * Well documented.
 * Consistent with the CodeHouse Cloud product vision.
 
----
+
 
 # 52. CodeHouse Cloud Development Philosophy
 
@@ -2114,7 +2119,7 @@ Write code that is:
 
 **Learn. Code. Build. Collaborate. Grow.**
 
----
+
 
 # Contact
 
